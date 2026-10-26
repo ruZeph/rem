@@ -2,7 +2,7 @@
   "name": "rem",
   "productName": "REM",
   "appId": "io.liriliri.rem",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Rclone desktop app",
   "main": "dist/main/index.js",
   "scripts": {
@@ -17,7 +17,6 @@
     "build:win:portable": "npm run build:all && node script/build-win-portable.mjs",
     "build": "zx script/build.mjs",
     "pack": "zx script/pack.mjs",
-    "rclone": "zx script/rclone.mjs",
     "start": "electron ./dist/main/index.js --inspect=9229",
     "test:unit": "vitest run",
     "lint": "eslint \"src/**/*.{ts,tsx}\"",
@@ -32,17 +31,23 @@
   "keywords": [
     "rclone"
   ],
-  "author": "surunzi",
+  "author": {
+    "name": "surunzi",
+    "email": "surunzi@foxmail.com"
+  },
   "license": "AGPL-3.0",
   "bugs": {
     "url": "https://github.com/liriliri/rem/issues"
   },
   "homepage": "https://github.com/liriliri/rem#readme",
+  "dependencies": {
+    "rclone-static": "^0.1.0"
+  },
   "devDependencies": {
     "@types/node": "^24.0.0",
     "@types/react": "^19.1.7",
     "@types/react-dom": "^19.1.6",
-    "@vitejs/plugin-react": "^4.5.2",
+    "@vitejs/plugin-react": "^5.2.0",
     "@xterm/addon-canvas": "^0.7.0",
     "@xterm/addon-fit": "^0.10.0",
     "@xterm/addon-unicode11": "^0.8.0",
@@ -51,8 +56,8 @@
     "axios": "^1.10.0",
     "concurrently": "^9.1.2",
     "custom-electron-titlebar": "^4.2.8",
-    "electron": "30.5.1",
-    "electron-builder": "^25.1.8",
+    "electron": "37.10.3",
+    "electron-builder": "26.15.3",
     "electron-updater": "^6.6.2",
     "eslint": "^9.28.0",
     "eslint-config-prettier": "^10.1.5",
@@ -60,11 +65,11 @@
     "globals": "^16.2.0",
     "licia": "^1.48.0",
     "luna-carousel": "^0.3.0",
-    "luna-data-grid": "^2.0.2",
-    "luna-drag-selector": "^0.1.0",
-    "luna-file-list": "^0.5.6",
+    "luna-data-grid": "^2.1.1",
+    "luna-drag-selector": "^0.2.0",
+    "luna-file-list": "^0.6.0",
     "luna-gallery": "^1.1.2",
-    "luna-icon-list": "^0.2.6",
+    "luna-icon-list": "^0.6.1",
     "luna-image-viewer": "^1.1.0",
     "luna-menu": "^0.2.0",
     "luna-modal": "^1.3.3",
@@ -86,8 +91,7 @@
     "react-dom": "^19.1.0",
     "sass": "^1.89.2",
     "typescript-eslint": "^8.34.0",
-    "vite": "^5.4.19",
-    "vitest": "^2.1.9",
+    "vite": "^7.3.7",
     "zx": "^8.5.5"
   }
 }
